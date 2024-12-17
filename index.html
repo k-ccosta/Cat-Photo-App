@@ -7,7 +7,7 @@
 </head>
 <body>
     <main>
-        <h1>Cat Photo App</h1>
+        <h1>CatPhotoApp</h1>
 
         <section>
             <h2>Cat Photos</h2>
@@ -45,19 +45,40 @@
         <section>
             <h2>Cat Form</h2>
             <form action="https://freecatphotoapp.com/submit-cat-photo" name="catphotourl">
-                <label for="">
-                    <input type="radio" name="indoor-outdoor" value="indoor" id="indoor">
-                    Indoor
-                </label>
+                <fieldset>
+                    <legend>Is your cat an indoor or outdoor cat?</legend>
+                    <label for="">
+                        <input type="radio" name="indoor-outdoor" value="indoor" id="indoor" checked>
+                        Indoor
+                    </label>
+    
+                    <label>
+                        <input type="radio" name="indoor-outdoor" value="outdoor" id="outdoor">
+                        Outdoor
+                    </label>
+                </fieldset>
 
-                <label>
-                    <input type="radio" name="indoor-outdoor" value="outdoor" id="outdoor">
-                    Outdoor
-                </label>
+                <fieldset>
+                    <legend>What's your cat's personality?</legend>
+                    
+                    <input id="loving" type="checkbox" name="personality" value="loving" checked>
+                    <label for="loving">Loving</label>
+
+                    <input id="lazy" type="checkbox" name="personality" value="lazy">
+                    <label for="lazy">Lazy</label>
+
+                    <input id="energetic" type="checkbox" name="personality" value="energetic">
+                    <label for="energetic">Energetic</label>
+
+                </fieldset>
                 <input type="text" placeholder="cat photo URL" required>
                 <button type="submit">Submit</button>
             </form>
         </section>
     </main>
+
+    <footer>
+        <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+    </footer>
 </body>
 </html>
